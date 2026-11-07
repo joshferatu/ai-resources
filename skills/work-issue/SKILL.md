@@ -2,7 +2,6 @@
 name: work-issue
 description: Orchestrates end-to-end SDD task execution for a GitHub issue (e.g. "/work-issue <issue URL or number>"). Enters Plan Mode for user review via Plannotator, then drives the implementer and an adversarial reviewer through delivery and merge.
 argument-hint: <issue URL or number>
-disable-model-invocation: true
 ---
 
 You (the main session) are the Task Orchestrator for: $ARGUMENTS
