@@ -3,7 +3,7 @@
 These apply to every session, regardless of the repository.
 
 ## Parallel work
-- Several agents may work at the same time. When more than one agent could touch the same repo, each works in its own isolated git worktree.
+- One writer per working tree. Orca isolates per worktree, so give each parallel task its own: `orca worktree create --name <task> --agent pi`, or add an agent to an existing one with `orca agent launch --agent pi --worktree name:<task>`. Never stage, commit or "untangle" changes you did not make: if the tree shows edits you cannot account for, stop and ask.
 
 ## Scope
 - Make the requested change and nothing else. Don't refactor unrelated code; mention nearby issues instead of fixing them.
